@@ -11,7 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120706070025) do
+ActiveRecord::Schema.define(:version => 20120706105924) do
+
+  create_table "matches", :force => true do |t|
+    t.integer  "homeuser_id"
+    t.integer  "awayuser_id"
+    t.integer  "homegoals_id"
+    t.integer  "awaygoals_id"
+    t.string   "hometeam"
+    t.string   "awayteam"
+    t.datetime "datetime"
+    t.integer  "NewsItem_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "username"
