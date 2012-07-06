@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Homeuser:</b>
+  <%= @match.homeuser_id %>
+</p>
+
+<p>
+  <b>Awayuser:</b>
+  <%= @match.awayuser_id %>
+</p>
+
+<p>
+  <b>Homegoals:</b>
+  <%= @match.homegoals_id %>
+</p>
+
+<p>
+  <b>Awaygoals:</b>
+  <%= @match.awaygoals_id %>
+</p>
+
+<p>
+  <b>Hometeam:</b>
+  <%= @match.hometeam %>
+</p>
+
+<p>
+  <b>Awayteam:</b>
+  <%= @match.awayteam %>
+</p>
+
+<p>
+  <b>Datetime:</b>
+  <%= @match.datetime %>
+</p>
+
+<p>
+  <b>Newsitem:</b>
+  <%= @match.NewsItem_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_match_path(@match) %> |
+<%= link_to 'Back', matches_path %>
