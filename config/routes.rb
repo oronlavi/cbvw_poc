@@ -1,8 +1,5 @@
 CbvwPoc::Application.routes.draw do
   resources :matches
-
-  resources :users
-
   resources :users
 
   get "home/index"
