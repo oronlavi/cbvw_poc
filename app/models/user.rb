@@ -1,3 +1,3 @@
 class User < ActiveRecord::Base
-  attr_accessible :country, :email, :name, :originName
+  attr_accessible :age, :country, :email, :teamname, :username
 end
