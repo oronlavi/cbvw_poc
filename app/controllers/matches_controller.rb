@@ -42,6 +42,9 @@ class MatchesController < ApplicationController
   def create
 
 
+    #creations_params = params.dup
+    #params[:match][:homeuser_id] = User.where('username == ?', params[:match][:home_username]).first.id
+    #@match = Match.new(params[:match]) #.except!(:homeuser))
     @match = Match.new(params[:match])
     #@match = {:username_id => 1}
 
