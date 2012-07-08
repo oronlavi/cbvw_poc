@@ -43,7 +43,7 @@ class MatchesController < ApplicationController
 
 
     @match = Match.new(params[:match])
-    #@match = {:username => 'haim'}
+    #@match = {:username_id => 1}
 
     respond_to do |format|
       if @match.save

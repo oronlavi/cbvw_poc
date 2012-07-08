@@ -38,7 +38,7 @@
       <file leaf-file-name="matches_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/matches_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="5" selection-start="833" selection-end="833" vertical-scroll-proportion="0.0">
+            <state line="44" column="4" selection-start="793" selection-end="793" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -47,7 +47,7 @@
       <file leaf-file-name="match.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/match.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="45" selection-start="240" selection-end="240" vertical-scroll-proportion="0.13315926">
+            <state line="6" column="0" selection-start="385" selection-end="385" vertical-scroll-proportion="0.26631853">
               <folding />
             </state>
           </provider>
@@ -56,7 +56,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/matches/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="35" selection-start="597" selection-end="597" vertical-scroll-proportion="-5.576923">
+            <state line="19" column="0" selection-start="308" selection-end="525" vertical-scroll-proportion="-3.6153846">
               <folding />
             </state>
           </provider>
@@ -738,13 +738,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/matches_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="5" selection-start="833" selection-end="833" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/matches/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="0" selection-start="341" selection-end="341" vertical-scroll-proportion="-5.8846154">
@@ -752,16 +745,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/matches_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="4" selection-start="793" selection-end="793" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/matches/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="35" selection-start="597" selection-end="597" vertical-scroll-proportion="-5.576923">
+        <state line="19" column="0" selection-start="308" selection-end="525" vertical-scroll-proportion="-3.6153846">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/match.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="45" selection-start="240" selection-end="240" vertical-scroll-proportion="0.13315926">
+        <state line="6" column="0" selection-start="385" selection-end="385" vertical-scroll-proportion="0.26631853">
           <folding />
         </state>
       </provider>
