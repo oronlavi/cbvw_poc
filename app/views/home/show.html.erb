@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<h2>User stats for user <%= link_to @user.username, user_path(@user) %></h2>
 <p>
   <b>User id:</b>
   <%= @user.id %>
@@ -42,4 +42,4 @@
 
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', root_path %>
+<%= link_to 'Home', root_path %>

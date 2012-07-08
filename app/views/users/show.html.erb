@@ -25,6 +25,6 @@
   <%= @user.age %>
 </p>
 
-
+<%= link_to 'User stats', "/home/" + @user.id.to_s %> |
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'User List', users_path %>
