@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User id:</b>
+  <%= @user.id %>
+</p>
+
+<p>
+  <b>Matches played:</b>
+  <%= matches_played(@user) %>
+</p>
+
+<p>
+  <b>Matches Won:</b>
+  <%= matches_won(@user) %>
+</p>
+
+<p>
+  <b>Matches Drawn:</b>
+  <%= matches_drawn(@user) %>
+</p>
+
+<p>
+  <b>Matches Lost:</b>
+  <%= matches_lost(@user) %>
+</p>
+
+<p>
+  <b>Goals for:</b>
+  <%= goals_for(@user) %>
+</p>
+
+<p>
+  <b>Goals against:</b>
+  <%= goals_against(@user) %>
+</p>
+
+<p>
+  <b>Points:</b>
+  <%= pts(@user) %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', root_path %>

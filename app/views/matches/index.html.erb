@@ -17,8 +17,8 @@
 
 <% @matches.each do |match| %>
   <tr>
-    <td><%= match.homeuser_id %></td>
-    <td><%= match.awayuser_id %></td>
+    <td><%= link_to User.find(match.homeuser_id).username,  user_path( User.find(match.homeuser_id))  %></td>
+    <td><%= link_to User.find(match.awayuser_id).username, user_path( User.find(match.awayuser_id)) %></td>
     <td><%= match.homegoals_id %></td>
     <td><%= match.awaygoals_id %></td>
     <td><%= match.hometeam %></td>
@@ -35,3 +35,8 @@
 <br />
 
 <%= link_to 'New Match', new_match_path %>
+<%= link_to 'User List', users_path %>
+
+<br /><br />
+
+<%=  link_to 'Home', root_path %>
