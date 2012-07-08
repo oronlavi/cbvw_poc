@@ -4,7 +4,7 @@ class CreateMatches < ActiveRecord::Migration
       t.integer :homeuser_id
       t.integer :awayuser_id
       t.integer :homegoals_id
-      t.integer :awaygoals_id
+      t.integer :awaygoals
       t.string :hometeam
       t.string :awayteam
       t.datetime :datetime

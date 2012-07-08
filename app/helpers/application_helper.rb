@@ -9,14 +9,14 @@ module ApplicationHelper
   def matches_won(user)
     home_matches = user.home_matches
     away_matches = user.away_matches
-    home_matches.select{ |match| match.homegoals_id > match.awaygoals_id }.count +
-        away_matches.select{ |match| match.homegoals_id < match.awaygoals_id }.count
+    home_matches.select{ |match| match.homegoals > match.awaygoals }.count +
+        away_matches.select{ |match| match.homegoals < match.awaygoals }.count
   end
 
   # Returns the number of games drawn by the user
   def matches_drawn(user)
     matches = user.home_matches + user.away_matches
-    matches.select { |match| match.homegoals_id == match.awaygoals_id}.count
+    matches.select { |match| match.homegoals == match.awaygoals}.count
   end
 
   # Returns the number of games lost by the user
@@ -29,8 +29,8 @@ module ApplicationHelper
     home_matches = user.home_matches
     away_matches = user.away_matches
     count = 0
-    home_matches.each { |match| count += match.homegoals_id}
-    away_matches.each { |match| count += match.awaygoals_id}
+    home_matches.each { |match| count += match.homegoals}
+    away_matches.each { |match| count += match.awaygoals}
     count
   end
 
@@ -38,8 +38,8 @@ module ApplicationHelper
     home_matches = user.home_matches
     away_matches = user.away_matches
     count = 0
-    home_matches.each { |match| count += match.awaygoals_id}
-    away_matches.each { |match| count += match.homegoals_id}
+    home_matches.each { |match| count += match.awaygoals}
+    away_matches.each { |match| count += match.homegoals}
     count
   end
 
