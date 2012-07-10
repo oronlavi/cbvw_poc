@@ -3,9 +3,8 @@ CbvwPoc::Application.routes.draw do
   resources :matches
   resources :users
 
-  get "home/index"
-
-  match "/home/:id" => "home#show"
+  match '/home', to: 'home#index'
+  match "/home/:id", to: "home#show"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
