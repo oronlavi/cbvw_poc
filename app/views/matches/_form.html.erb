@@ -1,49 +1,49 @@
 <%= form_for(@match) do |f| %>
-  <% if @match.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@match.errors.count, "error") %> prohibited this match from being saved:</h2>
+    <% if @match.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@match.errors.count, "error") %> prohibited this match from being saved:</h2>
 
-      <ul>
-      <% @match.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+          <ul>
+            <% @match.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :home_username %>
+      <%= f.text_field :home_username %>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :homeuser_id %><br />
-    <%= f.number_field :homeuser_id %>
-  </div>
-  <div class="field">
-    <%= f.label :awayuser_id %><br />
-    <%= f.number_field :awayuser_id %>
-  </div>
-  <div class="field">
-    <%= f.label :homegoals %><br />
-    <%= f.number_field :homegoals %>
-  </div>
-  <div class="field">
-    <%= f.label :awaygoals %><br />
-    <%= f.number_field :awaygoals %>
-  </div>
-  <div class="field">
-    <%= f.label :hometeam %><br />
-    <%= f.text_field :hometeam %>
-  </div>
-  <div class="field">
-    <%= f.label :awayteam %><br />
-    <%= f.text_field :awayteam %>
-  </div>
-  <div class="field">
-    <%= f.label :datetime %><br />
-    <%= f.datetime_select :datetime %>
-  </div>
-  <div class="field">
-    <%= f.label :NewsItem_id %><br />
-    <%= f.number_field :NewsItem_id %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="field">
+      <%= f.label :away_username %>
+      <%= f.text_field :away_username %>
+    </div>
+    <div class="field">
+      <%= f.label :homegoals %>
+      <%= f.number_field :homegoals %>
+    </div>
+    <div class="field">
+      <%= f.label :awaygoals %>
+      <%= f.number_field :awaygoals %>
+    </div>
+    <div class="field">
+      <%= f.label :hometeam %>
+      <%= f.text_field :hometeam %>
+    </div>
+    <div class="field">
+      <%= f.label :awayteam %>
+      <%= f.text_field :awayteam %>
+    </div>
+    <div class="field">
+      <%= f.label :datetime %>
+      <%= f.datetime_select :datetime %>
+    </div>
+    <div class="field">
+      <%= f.label :NewsItem_id %>
+      <%= f.number_field :NewsItem_id %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
 <% end %>

@@ -42,10 +42,17 @@ class MatchesController < ApplicationController
   def create
 
 
-    #creations_params = params.dup
-    #params[:match][:homeuser_id] = User.where('username == ?', params[:match][:home_username]).first.id
-    #@match = Match.new(params[:match]) #.except!(:homeuser))
-    @match = Match.new(params[:match])
+    creations_params = params[:match].dup
+    homeuser =  User.find_by_username(creations_params[:home_username].downcase)
+    awayuser =  User.find_by_username(creations_params[:away_username].downcase)
+    creations_params[:homeuser_id] = 0
+    creations_params[:awayuser_id] = 0
+
+    if homeuser then creations_params[:homeuser_id] = homeuser.id end
+    if homeuser then creations_params[:awayuser_id] = awayuser.id end
+    creations_params.except!(:home_username)
+    creations_params.except!(:away_username)
+    @match = Match.new(creations_params)
     #@match = {:username_id => 1}
 
     respond_to do |format|
