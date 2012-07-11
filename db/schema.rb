@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120708101312) do
+ActiveRecord::Schema.define(:version => 20120711083742) do
 
   create_table "matches", :force => true do |t|
     t.integer  "homeuser_id"
@@ -32,8 +32,9 @@ ActiveRecord::Schema.define(:version => 20120708101312) do
     t.string   "email"
     t.string   "country"
     t.integer  "age"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.string   "fifa_username"
   end
 
 end
