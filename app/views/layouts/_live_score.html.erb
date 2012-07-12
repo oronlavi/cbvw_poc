@@ -1,4 +1,4 @@
-<div class="center"><h3>Live match score:</h3></div>
+<div class="center"><h3>Featured match:</h3></div>
 <% match = Match.last unless match = Match.find_last_by_ended(false) %> <!-- pick an ongoing match, or the latest one to end if there is none -->
 <% if !match.nil? then %>
     <div class="well center">
@@ -38,12 +38,16 @@
         </div>
       </div>
 
-      <% if !match.ended %>
+
           <div class="row-fluid">
             <div class="span12">
+              <% if !match.ended %>
               <span class="label label-info">Minutes in: <%= match.minutes %></span>
+                  <% else %>
+                  <span class="label label-info">Match ended</span>
+              <% end %>
             </div>
           </div>
-      <% end %>
+
 <% end %>
 </div>
