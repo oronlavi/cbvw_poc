@@ -43,15 +43,15 @@ class MatchesController < ApplicationController
 
 
     creations_params = params[:match].dup
-    homeuser =  User.find_by_username(creations_params[:home_username].downcase)
-    awayuser =  User.find_by_username(creations_params[:away_username].downcase)
+    homeuser =  User.find_by_fifa_username(creations_params[:home_fifa_username].downcase)
+    awayuser =  User.find_by_fifa_username(creations_params[:away_fifa_username].downcase)
     creations_params[:homeuser_id] = 0
     creations_params[:awayuser_id] = 0
 
     if homeuser then creations_params[:homeuser_id] = homeuser.id end
     if homeuser then creations_params[:awayuser_id] = awayuser.id end
-    creations_params.except!(:home_username)
-    creations_params.except!(:away_username)
+    creations_params.except!(:home_fifa_username)
+    creations_params.except!(:away_fifa_username)
     @match = Match.new(creations_params)
     #@match = {:username_id => 1}
 

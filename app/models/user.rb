@@ -6,5 +6,5 @@ class User < ActiveRecord::Base
 
 
   # before_save { self.email.downcase! }
-  # before_save { self.username.downcase! }
+  before_save { self.fifa_username.downcase! }
 end
