@@ -40,8 +40,6 @@ class MatchesController < ApplicationController
   # POST /matches
   # POST /matches.json
   def create
-
-
     creations_params = params[:match].dup
     homeuser =  User.find_by_fifa_username(creations_params[:home_fifa_username].downcase)
     awayuser =  User.find_by_fifa_username(creations_params[:away_fifa_username].downcase)
@@ -49,11 +47,13 @@ class MatchesController < ApplicationController
     creations_params[:awayuser_id] = 0
 
     if homeuser then creations_params[:homeuser_id] = homeuser.id end
-    if homeuser then creations_params[:awayuser_id] = awayuser.id end
+    if awayuser then creations_params[:awayuser_id] = awayuser.id end
     creations_params.except!(:home_fifa_username)
     creations_params.except!(:away_fifa_username)
+    creations_params.except!(:ended)
+
     @match = Match.new(creations_params)
-    #@match = {:username_id => 1}
+
 
     respond_to do |format|
       if @match.save
@@ -70,6 +70,11 @@ class MatchesController < ApplicationController
   # PUT /matches/1.json
   def update
     @match = Match.find(params[:id])
+
+    if params[:match][:ended] then params[:match][:NewsItem_id] = 50 end
+    params[:match].except!(:home_fifa_username)
+    params[:match].except!(:away_fifa_username)
+    params[:match].except!(:ended)
 
     respond_to do |format|
       if @match.update_attributes(params[:match])
