@@ -40,6 +40,15 @@
   <%= @match.NewsItem_id %>
 </p>
 
+<p>
+  <b>Minutes in:</b>
+  <%= @match.minutes %>
+</p>
+
+<p>
+  <b>Ended:</b>
+  <%= @match.ended %>
+</p>
 
 <%= link_to 'Edit', edit_match_path(@match) %> |
 <%= link_to 'Back', matches_path %>

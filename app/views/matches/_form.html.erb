@@ -43,6 +43,14 @@
       <%= f.label :NewsItem_id %>
       <%= f.number_field :NewsItem_id %>
     </div>
+    <div class="field">
+      <%= f.label :minutes %>
+      <%= f.number_field :minutes %>
+    </div>
+    <div class="field">
+      <%= f.label :ended %>
+      <%= f.check_box :ended, {}, "true", "false" %>
+    </div>
     <div class="actions">
       <%= f.submit %>
     </div>

@@ -10,6 +10,8 @@
     <th>Awayteam</th>
     <th>Datetime</th>
     <th>Newsitem</th>
+    <th>Minutes in</th>
+    <th>Ended?</th>
     <th></th>
     <th></th>
     <th></th>
@@ -25,6 +27,8 @@
     <td><%= match.awayteam %></td>
     <td><%= match.datetime %></td>
     <td><%= match.NewsItem_id %></td>
+    <td><%= match.minutes %></td>
+    <td><%= match.ended %></td>
     <td><%= link_to 'Show', match , class: "btn btn-small btn-primary" %></td>
     <td><%= link_to 'Edit', edit_match_path(match) , class: "btn btn-small btn-primary" %></td>
     <td><%= link_to 'Destroy', match, method: :delete, data: { confirm: 'Are you sure?' } , class: "btn btn-small btn-primary" %></td>

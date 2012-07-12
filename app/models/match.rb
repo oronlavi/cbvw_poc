@@ -1,5 +1,6 @@
 class Match < ActiveRecord::Base
-  attr_accessible :NewsItem_id, :awaygoals, :awayteam, :awayuser_id, :datetime, :homegoals, :hometeam, :homeuser_id
+  attr_accessible :NewsItem_id, :awaygoals, :awayteam, :awayuser_id, :datetime,
+                  :homegoals, :hometeam, :homeuser_id, :minutes, :ended
   attr_accessor :home_fifa_username, :away_fifa_username #virtual attr just for POST
 
   belongs_to :homeuser, :class_name => "User"

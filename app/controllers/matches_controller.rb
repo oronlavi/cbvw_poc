@@ -50,7 +50,6 @@ class MatchesController < ApplicationController
     if awayuser then creations_params[:awayuser_id] = awayuser.id end
     creations_params.except!(:home_fifa_username)
     creations_params.except!(:away_fifa_username)
-    creations_params.except!(:ended)
 
     @match = Match.new(creations_params)
 
@@ -71,10 +70,8 @@ class MatchesController < ApplicationController
   def update
     @match = Match.find(params[:id])
 
-    if params[:match][:ended] then params[:match][:NewsItem_id] = 50 end
     params[:match].except!(:home_fifa_username)
     params[:match].except!(:away_fifa_username)
-    params[:match].except!(:ended)
 
     respond_to do |format|
       if @match.update_attributes(params[:match])
