@@ -1,32 +1,31 @@
+<h1>User Ranks</h1>
 
-  <h1>User Ranks</h1>
+<table>
+  <tr>
+    <th>Position</th>
+    <th>Username</th>
+    <th>Played</th>
+    <th>Won</th>
+    <th>Lost</th>
+    <th>Goal Difference</th>
+    <th>Points</th>
+    <th></th>
+  </tr>
 
-  <table>
-    <tr>
-      <th>Position</th>
-      <th>Username</th>
-      <th>Played</th>
-      <th>Won</th>
-      <th>Lost</th>
-      <th>Goal Difference</th>
-      <th>Points</th>
-      <th></th>
-    </tr>
-
-    <% rank = 0 %>
-    <% @users.sort { |a, b| pts(b) <=> pts(a) }.each do |user| %>
-        <% rank += 1 %>
-        <tr>
-          <td><%= rank %></td>
-          <td><%= link_to user.username, user_path(user) %></td>
-          <td><%= matches_played(user) %></td>
-          <td><%= matches_won(user) %></td>
-          <td><%= matches_lost(user) %></td>
-          <td><%= goals_for(user) - goals_against(user) %></td>
-          <td><%= pts(user) %></td>
-          <td><%= link_to 'User stats', "/home/" + user.id.to_s, class: "btn btn-small btn-primary" %></td>
-        </tr>
-    <% end %>
-  </table>
+  <% rank = 0 %>
+  <% @users.sort { |a, b| pts(b) <=> pts(a) }.each do |user| %>
+      <% rank += 1 %>
+      <tr>
+        <td><%= rank %></td>
+        <td><%= link_to user.username, user_path(user) %></td>
+        <td><%= matches_played(user) %></td>
+        <td><%= matches_won(user) %></td>
+        <td><%= matches_lost(user) %></td>
+        <td><%= goals_for(user) - goals_against(user) %></td>
+        <td><%= pts(user) %></td>
+        <td><%= link_to 'User stats', "/home/" + user.id.to_s, class: "btn btn-small btn-primary" %></td>
+      </tr>
+  <% end %>
+</table>
 
 <br/>
