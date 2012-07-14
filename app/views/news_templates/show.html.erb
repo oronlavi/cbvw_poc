@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Major:</b>
+  <%= @news_template.major %>
+</p>
+
+<p>
+  <b>Minor:</b>
+  <%= @news_template.minor %>
+</p>
+
+<p>
+  <b>Detail:</b>
+  <%= @news_template.detail %>
+</p>
+
+<p>
+  <b>News type:</b>
+  <%= @news_template.news_type %>
+</p>
+
+
+<%= link_to 'Edit', edit_news_template_path(@news_template) %> |
+<%= link_to 'Back', news_templates_path %>

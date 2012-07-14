@@ -1,5 +1,7 @@
 CbvwPoc::Application.routes.draw do
 
+  resources :news_templates
+
   resources :matches
   resources :users
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120712170943) do
+ActiveRecord::Schema.define(:version => 20120714100148) do
 
   create_table "matches", :force => true do |t|
     t.integer  "homeuser_id"
@@ -26,6 +26,22 @@ ActiveRecord::Schema.define(:version => 20120712170943) do
     t.datetime "updated_at",  :null => false
     t.integer  "minutes"
     t.boolean  "ended"
+  end
+
+  create_table "news_items", :force => true do |t|
+    t.integer  "news_template_id"
+    t.integer  "match_id"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  create_table "news_templates", :force => true do |t|
+    t.string   "major"
+    t.string   "minor"
+    t.text     "detail"
+    t.integer  "news_type"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|

@@ -1,0 +1,29 @@
+<h1>Listing news_templates</h1>
+
+<table>
+  <tr>
+    <th>Major</th>
+    <th>Minor</th>
+    <th>Detail</th>
+    <th>News type</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @news_templates.each do |news_template| %>
+  <tr>
+    <td><%= news_template.major %></td>
+    <td><%= news_template.minor %></td>
+    <td><%= news_template.detail %></td>
+    <td><%= news_template.news_type %></td>
+    <td><%= link_to 'Show', news_template %></td>
+    <td><%= link_to 'Edit', edit_news_template_path(news_template) %></td>
+    <td><%= link_to 'Destroy', news_template, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New News template', new_news_template_path %>

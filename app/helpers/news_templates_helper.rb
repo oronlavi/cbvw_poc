@@ -1,0 +1,2 @@
+module NewsTemplatesHelper
+end
