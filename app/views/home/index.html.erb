@@ -1,31 +1,51 @@
-<h1>User Ranks</h1>
+<!-- <div class="container-fluid"> -->
+  <%= image_tag "/images/news_part1_imageonly.png", id: "news_top" %>
+  <div class="row-fluid">
+    <div class="span8">
+      <div class="center well">
 
-<table>
-  <tr>
-    <th>Position</th>
-    <th>Username</th>
-    <th>Played</th>
-    <th>Won</th>
-    <th>Lost</th>
-    <th>Goal Difference</th>
-    <th>Points</th>
-    <th></th>
-  </tr>
+        <p>Main area!</p>
 
-  <% rank = 0 %>
-  <% @users.sort { |a, b| pts(b) <=> pts(a) }.each do |user| %>
-      <% rank += 1 %>
-      <tr>
-        <td><%= rank %></td>
-        <td><%= link_to user.username, user_path(user) %></td>
-        <td><%= matches_played(user) %></td>
-        <td><%= matches_won(user) %></td>
-        <td><%= matches_lost(user) %></td>
-        <td><%= goals_for(user) - goals_against(user) %></td>
-        <td><%= pts(user) %></td>
-        <td><%= link_to 'User stats', "/home/" + user.id.to_s, class: "btn btn-small btn-primary" %></td>
-      </tr>
-  <% end %>
-</table>
+      </div>
+    </div>
+    <div class="span4 center">
+      <aside>
 
-<br/>
+        <%= render 'layouts/live_score' %><br/>
+
+        <div class="row-fluid">
+          <div class="well center">
+            <table width="100%">
+              <tr>
+                <th>Pos</th>
+                <th>User</th>
+                <th>P</th>
+                <th>W</th>
+                <th>L</th>
+                <th>GD</th>
+                <th>Pts</th>
+              </tr>
+
+              <% rank = 0 %>
+              <% @users.sort { |a, b| pts(b) <=> pts(a) }.each do |user| %>
+                  <% rank += 1 %>
+                  <tr>
+                    <td><%= rank %></td>
+                    <td><%= link_to user.username, "/home/" + user.id.to_s %></td>
+                    <td><%= matches_played(user) %></td>
+                    <td><%= matches_won(user) %></td>
+                    <td><%= matches_lost(user) %></td>
+                    <td><%= goals_for(user) - goals_against(user) %></td>
+                    <td><%= pts(user) %></td>
+                  </tr>
+              <% end %>
+            </table>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+
+  <%= image_tag "/images/news_part3_imageonly.png", id: "news_top" %>
+<!-- </div> -->
