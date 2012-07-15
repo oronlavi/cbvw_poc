@@ -41,13 +41,17 @@ class MatchesController < ApplicationController
   # POST /matches.json
   def create
     creation_params = params[:match].dup
-    homeuser =  User.find_by_fifa_username(creation_params[:home_fifa_username].downcase)
-    awayuser =  User.find_by_fifa_username(creation_params[:away_fifa_username].downcase)
+    homeuser = User.find_by_fifa_username(creation_params[:home_fifa_username].downcase)
+    awayuser = User.find_by_fifa_username(creation_params[:away_fifa_username].downcase)
     creation_params[:homeuser_id] = 3
     creation_params[:awayuser_id] = 3
 
-    if homeuser then creation_params[:homeuser_id] = homeuser.id end
-    if awayuser then creation_params[:awayuser_id] = awayuser.id end
+    if homeuser then
+      creation_params[:homeuser_id] = homeuser.id
+    end
+    if awayuser then
+      creation_params[:awayuser_id] = awayuser.id
+    end
     creation_params.except!(:home_fifa_username)
     creation_params.except!(:away_fifa_username)
 
@@ -75,6 +79,14 @@ class MatchesController < ApplicationController
 
     respond_to do |format|
       if @match.update_attributes(params[:match])
+        if @match.ended then
+          if @match.homegoals > @match.awaygoals then
+            template = NewsTemplate.find_all_by_news_type(NewsTemplate::NewsTypes::HomeSmallWin).shuffle.first
+          else
+            template = NewsTemplate.find_all_by_news_type(NewsTemplate::NewsTypes::AwayBigWin).shuffle.first
+          end
+          NewsItem.create({:match_id => params[:id], :news_template_id => template.id})
+        end
         format.html { redirect_to @match, notice: 'Match was successfully updated.' }
         format.json { head :no_content }
       else

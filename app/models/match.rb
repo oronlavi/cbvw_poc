@@ -6,6 +6,8 @@ class Match < ActiveRecord::Base
   belongs_to :homeuser, :class_name => "User"
   belongs_to :awayuser, :class_name => "User"
 
+  has_one :news_item
+
   validates :homeuser, :awayuser, :presence => {:present => true, :message => "must be an existing user"}
   validate :check_home_and_away_users
 

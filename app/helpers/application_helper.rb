@@ -9,14 +9,14 @@ module ApplicationHelper
   def matches_won(user)
     home_matches = user.home_matches.find_all_by_ended(true)
     away_matches = user.away_matches.find_all_by_ended(true)
-    home_matches.select{ |match| match.homegoals > match.awaygoals }.count +
-        away_matches.select{ |match| match.homegoals < match.awaygoals }.count
+    home_matches.select { |match| match.homegoals > match.awaygoals }.count +
+        away_matches.select { |match| match.homegoals < match.awaygoals }.count
   end
 
   # Returns the number of games drawn by the user
   def matches_drawn(user)
     matches = user.home_matches.find_all_by_ended(true) + user.away_matches.find_all_by_ended(true)
-    matches.select { |match| match.homegoals == match.awaygoals}.count
+    matches.select { |match| match.homegoals == match.awaygoals }.count
   end
 
   # Returns the number of games lost by the user
@@ -29,8 +29,8 @@ module ApplicationHelper
     home_matches = user.home_matches.find_all_by_ended(true)
     away_matches = user.away_matches.find_all_by_ended(true)
     count = 0
-    home_matches.each { |match| count += match.homegoals}
-    away_matches.each { |match| count += match.awaygoals}
+    home_matches.each { |match| count += match.homegoals }
+    away_matches.each { |match| count += match.awaygoals }
     count
   end
 
@@ -38,13 +38,24 @@ module ApplicationHelper
     home_matches = user.home_matches.find_all_by_ended(true)
     away_matches = user.away_matches.find_all_by_ended(true)
     count = 0
-    home_matches.each { |match| count += match.awaygoals}
-    away_matches.each { |match| count += match.homegoals}
+    home_matches.each { |match| count += match.awaygoals }
+    away_matches.each { |match| count += match.homegoals }
     count
   end
 
   def pts(user)
     3 * matches_won(user) + matches_drawn(user)
+  end
+
+  def set_article_vars(str_in, match)
+    string = str_in.dup
+    string.gsub!('%hu', match.homeuser.username)
+    string.gsub!('%au', match.awayuser.username)
+    string.gsub!('%ht', match.hometeam)
+    string.gsub!('%at', match.awayteam)
+    string.gsub!('%hg', match.homegoals.to_s)
+    string.gsub!('%ag', match.awaygoals.to_s)
+    string
   end
 
 end
