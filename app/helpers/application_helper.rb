@@ -49,13 +49,12 @@ module ApplicationHelper
 
   def set_article_vars(str_in, match)
     string = str_in.dup
-    string.gsub!('%hu', match.homeuser.username)
-    string.gsub!('%au', match.awayuser.username)
-    string.gsub!('%ht', match.hometeam)
-    string.gsub!('%at', match.awayteam)
-    string.gsub!('%hg', match.homegoals.to_s)
-    string.gsub!('%ag', match.awaygoals.to_s)
-    "<%= link_to 'hello','http://www.google.com' %>" + string
+    string.gsub!(/(%hu)/i, '<a href=/users/' + match.homeuser.id.to_s + '>' + match.homeuser.username + '</a>')
+    string.gsub!(/(%au)/i,  '<a href=/users/' + match.awayuser.id.to_s + '>' + match.awayuser.username + '</a>')
+    string.gsub!(/(%ht)/i, match.hometeam)
+    string.gsub!(/(%at)/i, match.awayteam)
+    string.gsub!(/(%hg)/i, match.homegoals.to_s)
+    string.gsub!(/(%ag)/i, match.awaygoals.to_s)
     string
   end
 
