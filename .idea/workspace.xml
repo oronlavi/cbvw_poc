@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3576132c-e06a-4184-a4f4-6c0ab6988257" name="Default" comment="fixed nav links">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/face.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/_live_score.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/_live_score.html.erb" />
     </list>
     <ignored path="cbvw_poc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,7 +51,7 @@
       <file leaf-file-name="custom.css.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="133" column="19" selection-start="1837" selection-end="1837" vertical-scroll-proportion="0.8668407">
+            <state line="111" column="23" selection-start="1476" selection-end="1476" vertical-scroll-proportion="0.6005222">
               <folding />
             </state>
           </provider>
@@ -836,7 +831,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="133" column="19" selection-start="1837" selection-end="1837" vertical-scroll-proportion="0.8668407">
+        <state line="111" column="23" selection-start="1476" selection-end="1476" vertical-scroll-proportion="0.6005222">
           <folding />
         </state>
       </provider>
