@@ -55,6 +55,7 @@ module ApplicationHelper
     string.gsub!('%at', match.awayteam)
     string.gsub!('%hg', match.homegoals.to_s)
     string.gsub!('%ag', match.awaygoals.to_s)
+    "<%= link_to 'hello','http://www.google.com' %>" + string
     string
   end
 

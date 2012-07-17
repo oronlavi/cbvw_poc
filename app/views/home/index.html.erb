@@ -1,60 +1,59 @@
 <!-- <div class="container-fluid"> -->
 <!-- <meta http-equiv="refresh" content="30" /> -->
 <%= image_tag "/images/news_part1_imageonly.png", id: "news_top" %>
-<div class="row-fluid">
-  <div class="span8">
-    <div class="well headline1">
+<div class="container-fluid" id="newsarea">
+  <div class="row-fluid">
+    <div class="span8">
+      <div id="headline1">
 
-      <% item = NewsItem.last %>
-      <% if !item.nil? %>
-          <h1><%= set_article_vars item.news_template.major, item.match %></h1>
+        <% item = NewsItem.last %>
+        <% if !item.nil? %>
+            <img src="images/face.png" class="news_face" align="right">
 
-          <h2><%= set_article_vars item.news_template.minor, item.match %></h2>
+            <h1><%= set_article_vars(item.news_template.major, item.match).upcase %></h1>
 
-          <p><%= set_article_vars truncate(item.news_template.detail,
-                                           :length => 300, :omission => "... Read More!", :separator => ' '),
-                                  item.match%></p>
-      <% end %>
 
-    </div>
-  </div>
-  <div class="span4 center">
-    <aside>
 
-      <%= render 'layouts/live_score' %>
-      <br/>
+            <h2><%= set_article_vars(item.news_template.minor, item.match) %></h2>
 
-      <div class="row-fluid">
-        <div class="well center">
-          <table width="100%">
-            <tr>
-              <th>Pos</th>
-              <th>User</th>
-              <th>P</th>
-              <th>W</th>
-              <th>L</th>
-              <th>GD</th>
-              <th>Pts</th>
-            </tr>
+            <p><%= set_article_vars(truncate(item.news_template.detail,
+                                             :length => 300, :omission => "... Read More!", :separator => ' '),
+                                    item.match) %></p>
+        <% end %>
 
-            <% rank = 0 %>
-            <% @users.sort { |a, b| pts(b) <=> pts(a) }.each do |user| %>
-                <% rank += 1 %>
-                <tr>
-                  <td><%= rank %></td>
-                  <td><%= link_to user.username, "/home/" + user.id.to_s %></td>
-                  <td><%= matches_played(user) %></td>
-                  <td><%= matches_won(user) %></td>
-                  <td><%= matches_lost(user) %></td>
-                  <td><%= goals_for(user) - goals_against(user) %></td>
-                  <td><%= pts(user) %></td>
-                </tr>
-            <% end %>
-          </table>
-        </div>
       </div>
+    </div>
+    <div class="span4 center">
+      <aside><%= render 'layouts/live_score' %></aside>
 
-    </aside>
+      <aside>
+        <table width="100%">
+          <tr>
+            <th>Pos</th>
+            <th>User</th>
+            <th>P</th>
+            <th>W</th>
+            <th>L</th>
+            <th>GD</th>
+            <th>Pts</th>
+          </tr>
+
+          <% rank = 0 %>
+          <% @users.sort { |a, b| pts(b) <=> pts(a) }.each do |user| %>
+              <% rank += 1 %>
+              <tr>
+                <td><%= rank %></td>
+                <td><%= link_to user.username, "/home/" + user.id.to_s %></td>
+                <td><%= matches_played(user) %></td>
+                <td><%= matches_won(user) %></td>
+                <td><%= matches_lost(user) %></td>
+                <td><%= goals_for(user) - goals_against(user) %></td>
+                <td><%= pts(user) %></td>
+              </tr>
+          <% end %>
+        </table>
+      </aside>
+    </div>
   </div>
 </div>
 
