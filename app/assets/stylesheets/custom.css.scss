@@ -79,21 +79,37 @@ p {
 }
 
 input, textarea, select, .uneditable-input {
-  border: 1px solid #bbb;
+  border: 2px solid #4ac255;
+  border-radius: 5px;
+  padding: 10px;
   width: auto;
 }
 
-#news_top {
+input:focus, textarea:focus {
+  border-color:  #4aff55;
+  $shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 28px #4aff55;
+  @include box-shadow($shadow);
+  outline: 0;
+  outline: thin dotted \9; /* IE6-8 */
+}
+
+.faux_website_image {
   width: 100%;
   border: 0px;
   margin: 0px;
   padding: -10px;
 
 }
-
-#newsarea {
+.huge-pane-numbering{
+  font-size: 70%;
+  color: #fff;
+  margin-top: 30px;
+  align: right;
+  padding-top: 15%;
+  //margin-right: 10px;
+}
+.grey_background{
   background-color: #e3e5e4;
-  overflow: auto;
 }
 
 #headline1 {

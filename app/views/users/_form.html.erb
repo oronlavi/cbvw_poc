@@ -11,31 +11,28 @@
         </div>
     <% end %>
 
+    <p>Enter your FIFA 12 username:</br></p>
     <div class="field">
-      <%= f.label :username %>
-      <%= f.text_field :username %>
+      <%= f.text_field :fifa_username, placeholder: "FIFA 12 username" %>
+    </div>
+    <br/>
+    <p>Create a new team on our website:</br></p>
+    <div class="field">
+      <%= f.text_field :username, placeholder: "Username" %>
     </div>
     <div class="field">
-      <%= f.label :teamname %>
-      <%= f.text_field :teamname %>
+      <%= f.text_field :teamname, placeholder: "Team name" %>
     </div>
     <div class="field">
-      <%= f.label :email %>
-      <%= f.text_field :email %>
+      <%= f.text_field :email, placeholder: "E-mail Address" %>
     </div>
     <div class="field">
-      <%= f.label :fifa_username %>
-      <%= f.text_field :fifa_username %>
+      <%= f.text_field :country, placeholder: "Country" %>
     </div>
     <div class="field">
-      <%= f.label :country %>
-      <%= f.text_field :country %>
-    </div>
-    <div class="field">
-      <%= f.label :age %>
-      <%= f.number_field :age %>
+      <%= f.number_field :age, placeholder: "Age" %>
     </div>
     <div class="actions">
-      <%= f.submit %>
+      <%= f.submit class: "btn btn-success btn-large" %>
     </div>
 <% end %>
