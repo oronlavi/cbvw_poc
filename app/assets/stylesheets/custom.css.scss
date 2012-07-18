@@ -22,6 +22,14 @@ textarea {
   text-align: center;
 }
 
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
 .center h1 {
   margin-bottom: 10px;
 }
@@ -98,8 +106,8 @@ input:focus, textarea:focus {
   border: 0px;
   margin: 0px;
   padding: -10px;
-
 }
+
 .huge-pane-numbering{
   font-size: 70%;
   color: #fff;
@@ -160,4 +168,13 @@ aside:last-of-type {
   width: 15%;
   border-radius: 50px;
   //border: 2px solid black;
+}
+
+.side_numbering {
+  margin-top: 12%;
+  margin-bottom: 12%;
+  height: 20%;
+  width: 20%;
+  //float: right;
+  //border-radius: 50px;
 }
