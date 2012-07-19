@@ -8,7 +8,7 @@
 
         <% item = NewsItem.last %>
         <% if !item.nil? %>
-            <img src="images/face.png" class="news_face" align="right">
+            <img src="images/face.png" class="news_face">
             <h1><%= raw set_article_vars(item.news_template.major.upcase, item.match) %></h1>
 
             <h2><%= raw set_article_vars(item.news_template.minor, item.match) %></h2>

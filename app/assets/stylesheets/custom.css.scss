@@ -188,9 +188,13 @@ aside:last-of-type {
 }
 
 .news_face {
-  height: 15%;
+  text-align: right;
+  float: right;
+  height: auto;
   width: 15%;
-  border-radius: 50px;
+  border-radius: 40px;
+  margin: 5px;
+  min-width: 100px;
   //border: 2px solid black;
 }
 
