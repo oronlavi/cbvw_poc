@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3576132c-e06a-4184-a4f4-6c0ab6988257" name="Default" comment="fixed nav links">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
     </list>
     <ignored path="cbvw_poc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,7 +42,7 @@
       <file leaf-file-name="user.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/user.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="2" selection-start="405" selection-end="405" vertical-scroll-proportion="0.32162163">
+            <state line="2" column="0" selection-start="111" selection-end="111" vertical-scroll-proportion="0.08877285">
               <folding />
             </state>
           </provider>
@@ -56,7 +52,17 @@
         <entry file="file://$PROJECT_DIR$/app/views/users/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-              <folding />
+              <folding>
+                <marker date="1342537548145" expanded="true" signature="96:364" placeholder="..." />
+                <marker date="1342537548145" expanded="true" signature="216:349" placeholder="..." />
+                <marker date="1342537548145" expanded="true" signature="448:533" placeholder="..." />
+                <marker date="1342537548145" expanded="true" signature="617:689" placeholder="..." />
+                <marker date="1342537548145" expanded="true" signature="713:786" placeholder="..." />
+                <marker date="1342537548145" expanded="true" signature="810:885" placeholder="..." />
+                <marker date="1342537548145" expanded="true" signature="909:979" placeholder="..." />
+                <marker date="1342537548145" expanded="true" signature="1003:1067" placeholder="..." />
+                <marker date="1342537548145" expanded="true" signature="1093:1161" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -750,7 +756,17 @@
     <entry file="file://$PROJECT_DIR$/app/views/users/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
-          <folding />
+          <folding>
+            <marker date="1342537548145" expanded="true" signature="96:364" placeholder="..." />
+            <marker date="1342537548145" expanded="true" signature="216:349" placeholder="..." />
+            <marker date="1342537548145" expanded="true" signature="448:533" placeholder="..." />
+            <marker date="1342537548145" expanded="true" signature="617:689" placeholder="..." />
+            <marker date="1342537548145" expanded="true" signature="713:786" placeholder="..." />
+            <marker date="1342537548145" expanded="true" signature="810:885" placeholder="..." />
+            <marker date="1342537548145" expanded="true" signature="909:979" placeholder="..." />
+            <marker date="1342537548145" expanded="true" signature="1003:1067" placeholder="..." />
+            <marker date="1342537548145" expanded="true" signature="1093:1161" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -784,7 +800,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="2" selection-start="405" selection-end="405" vertical-scroll-proportion="0.32162163">
+        <state line="2" column="0" selection-start="111" selection-end="111" vertical-scroll-proportion="0.08877285">
           <folding />
         </state>
       </provider>
