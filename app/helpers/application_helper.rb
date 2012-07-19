@@ -43,6 +43,10 @@ module ApplicationHelper
     count
   end
 
+  def gd(user)
+    goals_for(user) - goals_against(user)
+  end
+
   def pts(user)
     3 * matches_won(user) + matches_drawn(user)
   end

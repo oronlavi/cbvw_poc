@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
   has_many :away_matches, :foreign_key => "awayuser_id", :class_name => "Match"
 
 
-  # before_save { self.email.downcase! }
+  before_save { self.email.downcase! }
   before_save { self.fifa_username.downcase! }
+
 end
