@@ -1,3 +1,33 @@
+<!-- <script type="text/javascript">
+    function Ajax(){
+        var xmlHttp;
+        try{
+            xmlHttp=new XMLHttpRequest();// Firefox, Opera 8.0+, Safari
+        }catch (e){
+            try{
+                xmlHttp=new ActiveXObject("Msxml2.XMLHTTP"); // Internet Explorer
+            }catch (e){
+                try{
+                    xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+                }catch (e){
+                    alert("No AJAX!?");
+                    return false;
+                }
+            }
+        }
+        xmlHttp.onreadystatechange=function(){
+            document.getElementById('rightbar').innerHTML=xmlHttp.responseText;
+            setTimeout('Ajax()',5000);
+        }
+        xmlHttp.open("GET",'home/1',true);
+        xmlHttp.send(null);
+    }
+    window.onload=function(){
+        setTimeout('Ajax()',5000);
+    }
+</script>
+-->
+
 <!-- <div class="container-fluid"> -->
 <!-- <meta http-equiv="refresh" content="30" /> -->
 <%= image_tag "/images/news_part1_imageonly.png", class: "faux_website_image" %>
@@ -20,7 +50,7 @@
 
       </div>
     </div>
-    <div class="span4 center">
+    <div class="span4 center" id="rightbar">
       <aside><%= render 'layouts/live_score' %></aside>
 
       <aside>

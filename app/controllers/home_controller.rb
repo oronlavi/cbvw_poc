@@ -3,6 +3,6 @@ class HomeController < ApplicationController
     @users = User.all
   end
   def show
-    @user = User.find(params[:id])
+    @users = User.all
   end
 end

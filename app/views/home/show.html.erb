@@ -1,45 +1,31 @@
 <p id="notice"><%= notice %></p>
-<h2>User stats for user <%= link_to @user.username, user_path(@user) %></h2>
-<p>
-  <b>User id:</b>
-  <%= @user.id %>
-</p>
 
-<p>
-  <b>Matches played:</b>
-  <%= matches_played(@user) %>
-</p>
+<aside><%= render 'layouts/live_score' %></aside>
 
-<p>
-  <b>Matches Won:</b>
-  <%= matches_won(@user) %>
-</p>
+<aside>
+  <table width="100%">
+    <tr>
+      <th>Pos</th>
+      <th>User</th>
+      <th>P</th>
+      <th>W</th>
+      <th>L</th>
+      <th>GD</th>
+      <th>Pts</th>
+    </tr>
 
-<p>
-  <b>Matches Drawn:</b>
-  <%= matches_drawn(@user) %>
-</p>
-
-<p>
-  <b>Matches Lost:</b>
-  <%= matches_lost(@user) %>
-</p>
-
-<p>
-  <b>Goals for:</b>
-  <%= goals_for(@user) %>
-</p>
-
-<p>
-  <b>Goals against:</b>
-  <%= goals_against(@user) %>
-</p>
-
-<p>
-  <b>Points:</b>
-  <%= pts(@user) %>
-</p>
-
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Home', root_path %>
+    <% rank = 0 %>
+    <% @users.sort { |a, b| if pts(b) == pts(a) then gd(b) <=> gd(a) else pts(b) <=> pts(a) end}.each do |user| %>
+        <% rank += 1 %>
+        <tr>
+          <td><%= rank %></td>
+          <td><%= link_to user.username, "/home/" + user.id.to_s %></td>
+          <td><%= matches_played(user) %></td>
+          <td><%= matches_won(user) %></td>
+          <td><%= matches_lost(user) %></td>
+          <td><%= gd(user) %></td>
+          <td><%= pts(user) %></td>
+        </tr>
+    <% end %>
+  </table>
+</aside>
