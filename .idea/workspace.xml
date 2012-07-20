@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3576132c-e06a-4184-a4f4-6c0ab6988257" name="Default" comment="fixed nav links">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/home_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/home_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/index.html.erb" afterPath="$PROJECT_DIR$/app/views/home/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
     </list>
     <ignored path="cbvw_poc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,7 +60,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="9" selection-start="336" selection-end="336" vertical-scroll-proportion="0.35311574">
+            <state line="5" column="69" selection-start="309" selection-end="309" vertical-scroll-proportion="0.25222552">
               <folding />
             </state>
           </provider>
@@ -862,7 +859,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="9" selection-start="336" selection-end="336" vertical-scroll-proportion="0.35311574">
+        <state line="5" column="69" selection-start="309" selection-end="309" vertical-scroll-proportion="0.25222552">
           <folding />
         </state>
       </provider>
