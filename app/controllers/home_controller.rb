@@ -4,5 +4,6 @@ class HomeController < ApplicationController
   end
   def show
     @users = User.all
+    render :partial => "layouts/live_score"
   end
 end
