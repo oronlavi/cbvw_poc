@@ -1,41 +1,8 @@
-<!-- For ease i'm just using a JQuery version hosted by JQuery- you can download any version and link to it locally -->
-<script src="http://code.jquery.com/jquery-latest.js"></script>
-
 <script>
     var refreshId = setInterval(function () {
-        $('#scoreboard').fadeOut("slow").load('/home/1').fadeIn("slow");
+        $('#scoreboard').fadeOut("slow").load('/scoreboard').fadeIn("slow");
     }, 5000);
 </script>
-
-<!-- <script type="text/javascript">
-    function Ajax(){
-        var xmlHttp;
-        try{
-            xmlHttp=new XMLHttpRequest();// Firefox, Opera 8.0+, Safari
-        }catch (e){
-            try{
-                xmlHttp=new ActiveXObject("Msxml2.XMLHTTP"); // Internet Explorer
-            }catch (e){
-                try{
-                    xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
-                }catch (e){
-                    alert("No AJAX!?");
-                    return false;
-                }
-            }
-        }
-        xmlHttp.onreadystatechange=function(){
-            document.getElementById('rightbar').innerHTML=xmlHttp.responseText;
-            setTimeout('Ajax()',5000);
-        }
-        xmlHttp.open("GET",'home/1',true);
-        xmlHttp.send(null);
-    }
-    window.onload=function(){
-        setTimeout('Ajax()',5000);
-    }
-</script>
--->
 
 <!-- <div class="container-fluid"> -->
 <!-- <meta http-equiv="refresh" content="30" /> -->
