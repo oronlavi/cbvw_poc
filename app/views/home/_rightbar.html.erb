@@ -1,0 +1,38 @@
+<div class="span4 center">
+  <aside id="scoreboard">
+    <%= render 'layouts/live_score' %>
+  </aside>
+
+  <aside>
+    <table width="100%">
+      <tr>
+        <th>Pos</th>
+        <th>User</th>
+        <th>P</th>
+        <th>W</th>
+        <th>L</th>
+        <th>GD</th>
+        <th>Pts</th>
+      </tr>
+
+      <% rank = 0 %>
+      <% @users.sort { |a, b|
+        if pts(b) == pts(a) then
+          gd(b) <=> gd(a)
+        else
+          pts(b) <=> pts(a)
+        end }.each do |user| %>
+          <% rank += 1 %>
+          <tr>
+            <td><%= rank %></td>
+            <td><%= link_to user.username, user_path(user) %></td>
+            <td><%= matches_played(user) %></td>
+            <td><%= matches_won(user) %></td>
+            <td><%= matches_lost(user) %></td>
+            <td><%= gd(user) %></td>
+            <td><%= pts(user) %></td>
+          </tr>
+      <% end %>
+    </table>
+  </aside>
+</div>
