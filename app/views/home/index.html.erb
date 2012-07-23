@@ -21,7 +21,7 @@
             <h2><%= raw set_article_vars(item.news_template.minor, item.match) %></h2>
 
             <p><%= raw set_article_vars(truncate(item.news_template.detail,
-                                                 :length => 300, :omission => "... Read More!", :separator => ' '),
+                                                 :length => 300, :omission => "... <a href='/'>Read More!</a>", :separator => ' '),
                                         item.match) %></p>
         <% end %>
 
